@@ -1,0 +1,16 @@
+{
+  "name": "fabric-modeling-mcp",
+  "private": true,
+  "description": "Microsoft Fabric MCP server and its sign-in for bw-migrating-mcp",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node start-fabric-mcp.mjs"
+  },
+  "dependencies": {
+    "@microsoft/fabric-mcp": "^1.7.0"
+  }
+}

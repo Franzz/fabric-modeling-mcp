@@ -1,0 +1,4 @@
+node_modules/
+# Azure CLI and its sign-in, written by build.mjs
+.venv/
+.azure/
