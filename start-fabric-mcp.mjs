@@ -33,6 +33,6 @@ if (signIn === 'azcli') {
 const entry = path.join(here, 'node_modules/@microsoft/fabric-mcp/index.js');
 if (!fs.existsSync(entry)) fail(`${entry} not found (run npm run build in bw-migrating-mcp)`);
 
-const child = spawn(process.execPath, [entry, 'server', 'start', '--mode', 'all'], { env, stdio: 'inherit' });
+const child = spawn(process.execPath, [entry, 'server', 'start', '--mode', 'all', '--dangerously-disable-elicitation'], { env, stdio: 'inherit' });
 for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => child.kill(signal));
 child.on('exit', (code, signal) => process.exit(signal ? 1 : code ?? 0));
